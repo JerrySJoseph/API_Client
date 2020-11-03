@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:enabled="true"
+        android:menuCategory="container"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_newrequest"
+            android:icon="@drawable/ic_newrequest"
+            android:title="New Request"
+           />
+        <item
+            android:id="@+id/nav_fcm"
+            android:icon="@drawable/ic_fire"
+            android:title="FCM" />
+        <item
+            android:id="@+id/nav_recent"
+            android:icon="@drawable/ic_recent"
+            android:title="Recents"
+           />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings"
+            />
+    </group>
+</menu>

@@ -1,0 +1,63 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <PreferenceCategory app:title="App Theme">
+
+        <SwitchPreferenceCompat
+            app:key="darkmode"
+            app:summaryOff="Turn this ON to enable dark mode theme."
+            app:summaryOn="Turn this OFF to enable Light mode theme."
+            app:title="Dark theme "
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Request Settings"
+        >
+
+        <EditTextPreference
+            app:key="fcmUrl"
+            app:title="FCM Server URL"
+            app:useSimpleSummaryProvider="true"
+            app:icon="@drawable/ic_settings"
+            app:isPreferenceVisible="true"/>
+        <ListPreference
+            app:entries="@array/timeout_entries"
+            app:entryValues="@array/timeout_values"
+            app:key="contimeout"
+            app:title="Connection Timeout (sec)"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:entries="@array/timeout_entries"
+            app:entryValues="@array/timeout_values"
+            app:key="readtimeout"
+            app:title="Read Timeout (sec)"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:entries="@array/timeout_entries"
+            app:entryValues="@array/timeout_values"
+            app:key="writetimeout"
+            app:title="Write Timeout (sec)"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Backup">
+
+        <SwitchPreferenceCompat
+            app:key="backup"
+            app:title="Enable request backup" />
+
+        <SwitchPreferenceCompat
+            app:dependency="backup"
+            app:key="savenetwork"
+            app:summaryOff="Turn this ON for saving network request to database."
+            app:summaryOn="Turn this OFF to stop saving network request to database."
+            app:title="Backup network request" />
+        <SwitchPreferenceCompat
+            app:dependency="backup"
+            app:key="savefcm"
+            app:summaryOff="Turn this ON for saving FCM request to database."
+            app:summaryOn="Turn this OFF to stop saving FCM request to database."
+            app:title="Backup FCM request" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

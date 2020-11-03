@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_newrequest">
+
+    <fragment
+        android:id="@+id/nav_fcm"
+        android:name="com.jstechnologies.androidpostman.ui.FCM.FcmFragment"
+        android:label="FCM"
+        tools:layout="@layout/fragment_fcm" />
+
+    <fragment
+        android:id="@+id/nav_newrequest"
+        android:name="com.jstechnologies.androidpostman.ui.NewRequest.NewRequestFragment"
+        android:label="New Requests"
+        tools:layout="@layout/fragment_new_request" />
+    <fragment
+        android:id="@+id/nav_recent"
+        android:name="com.jstechnologies.androidpostman.ui.Recents.RecentsFragment"
+        android:label="Recents"
+        tools:layout="@layout/fragment_recents" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.jstechnologies.androidpostman.ui.Settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@xml/root_preferences" />
+</navigation>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme.Screens"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.FCM.FcmFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    style="@style/cardStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="10dp"
+                    app:cardUseCompatPadding="true">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:padding="5dp"
+                            android:background="@drawable/bg_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_key"
+                                android:layout_margin="5dp"
+                                app:tint="@color/colorHiglight" />
+                            <EditText
+                                android:id="@+id/serverkey"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint=" Server Key"
+                                android:textColor="@color/colorHiglight"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:background="@drawable/bg_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:id="@+id/enabletoken"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_token"
+                                android:layout_margin="5dp"
+                                app:tint="@color/colorHiglight" />
+                            <EditText
+                                android:id="@+id/token"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint=" fcm tokens (seperate tokens by ', ')"
+                                android:textColor="@color/colorHiglight"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:background="@drawable/bg_border"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:id="@+id/enabletopic"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_topic"
+                                android:layout_margin="5dp"
+                                app:tint="@color/colorHiglight" />
+                            <EditText
+                                android:id="@+id/topic"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="topic"
+                                android:textColor="@color/colorHiglight"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Select one:"
+                                android:textStyle="bold"
+                                android:layout_gravity="left"/>
+                            <RadioGroup
+                                android:id="@+id/radiogroup"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:id="@+id/notification"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification"
+                                    android:checked="true"/>
+                                <RadioButton
+                                    android:id="@+id/data"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Data"/>
+                                <RadioButton
+                                    android:id="@+id/both"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Both"
+                                    />
+
+
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <com.jstechnologies.androidpostman.Views.DropDownView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@color/colorAccent"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_send" />
+
+</FrameLayout>
